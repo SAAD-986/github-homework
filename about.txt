@@ -1,3 +1,4 @@
-Computer Engineer specialized in system and application development,
-with experience in analyzing technical issues
-and designing innovative software solutions.
+My name is Saad Mohmmed ALOTAIBI 
+My field is Computer science KSU
+My favorite programming language is [Python / Java / C++ / etc.].
+I want to learn Git and GitHub to manage code and projects.
