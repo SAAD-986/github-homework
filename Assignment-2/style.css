@@ -1,0 +1,146 @@
+/* 1. إعدادات المتصفح والخطوط */
+:root {
+    --glass-color: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --accent-color: #d8bc33;
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* 2. هيكل الصفحة الموحد (يمنع القفز بين الصفحات) */
+body, html {
+    height: 100%;
+    width: 100%;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.main-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- أماكن وضع صور الخلفية لكل صفحة --- */
+.bg-home { 
+   
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+    url('https://www.shutterstock.com/image-photo/software-development-concept-coding-programmer-600nw-2267752509.jpg');  }
+.bg-about { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b'); }
+.bg-table { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe'); }
+.bg-contact { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d'); }
+
+/* 3. القائمة العلوية (Navbar) */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.navbar a:hover { color: var(--accent-color); }
+
+/* 4. Class 1) */
+.glass-card {
+    background: var(--glass-color);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px auto;
+    width: 85%;
+    max-width: 900px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* 5. العناوين (ID 1) */
+#main-heading {
+    color: var(--accent-color);
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+/* 6. الجداول (Class 2) */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(0,0,0,0.2);
+}
+
+.styled-table th, .styled-table td {
+    padding: 15px;
+    border: 1px solid var(--glass-border);
+    text-align: center;
+}
+
+.styled-table th { background: var(--accent-color); }
+
+/* 7. النماذج والأزرار */
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255,255,255,0.9);
+    color: #333;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover { transform: scale(1.05); }
+
+/* أنيميشن الظهور */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* --- الخلفيات بروابط خارجية  --- */
+.bg-home { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.shutterstock.com/image-photo/software-development-concept-coding-programmer-600nw-2267752509.jpg'); }
+.bg-about { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b'); }
+.bg-table { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe'); }
+.bg-contact { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d'); }
+
+/* --- تنسيق صورة الجهاز في الصفحة الرئيسية --- */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%; /* تجعل الصورة دائرية */
+    border: 4px solid var(--accent-color);
+    object-fit: cover; /* تمنع تمطط الصورة */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تواصل معي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-wrapper bg-contact"> 
+        <nav class="navbar">
+            <a href="index.html">الرئيسية</a>
+            <a href="about.html">من أنا</a>
+            <a href="table.html">الجدول</a>
+            <a href="contact.html">تواصل معي</a>
+        </nav>
+
+        <div class="glass-card">
+            <h1>تحدث إليّ</h1>
+            <form>
+                <input type="text" placeholder="الاسم الكامل" required>
+                <input type="email" placeholder="البريد الإلكتروني" required>
+                <input type="password" placeholder="كلمة المرور">
+                
+                <div style="margin: 10px 0;">
+                    <label>الجنس: </label>
+                    <input type="radio" name="gender" style="width: auto;"> ذكر
+                    <input type="radio" name="gender" style="width: auto;"> أنثى
+                </div>
+
+                <label>المهارات:</label>
+                <input type="checkbox" style="width: auto;"> HTML 
+                <input type="checkbox" style="width: auto;"> CSS
+
+                <select>
+                    <option>اختر الدولة</option>
+                    <option>السعودية</option>
+                    <option>مصر</option>
+                </select>
+
+                <input list="cities" placeholder="اختر المدينة">
+                <datalist id="cities">
+                    <option value="الرياض">
+                    <option value="جدة">
+                    <option value="القاهرة">
+                </datalist>
+
+                <textarea rows="4" placeholder="اكتب رسالتك هنا..."></textarea>
+                
+                <button type="submit" class="btn-primary">إرسال الرسالة</button>
+                <button type="reset" style="background: none; border: 1px solid white; color: white; cursor: pointer; padding: 10px; border-radius: 20px;">مسح</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
